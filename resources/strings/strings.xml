@@ -1,0 +1,46 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Tasker Trigger</string>
+
+    <string id="task_1_prompt">Enter task 1 name here</string>
+    <string id="task_1_title">Task 1</string>
+    <string id="task_2_prompt">Enter task 2 name here</string>
+    <string id="task_2_title">Task 2</string>
+    <string id="task_3_prompt">Enter task 3 name here</string>
+    <string id="task_3_title">Task 3</string>
+    <string id="task_4_prompt">Enter task 4 name here</string>
+    <string id="task_4_title">Task 4</string>
+    <string id="task_5_prompt">Enter task 5 name here</string>
+    <string id="task_5_title">Task 5</string>
+    <string id="task_6_prompt">Enter task 6 name here</string>
+    <string id="task_6_title">Task 6</string>
+    <string id="task_7_prompt">Enter task 7 name here</string>
+    <string id="task_7_title">Task 7</string>
+    <string id="task_8_prompt">Enter task 8 name here</string>
+    <string id="task_8_title">Task 8</string>
+    <string id="task_9_prompt">Enter task 9 name here</string>
+    <string id="task_9_title">Task 9</string>
+    <string id="task_10_prompt">Enter task 10 name here</string>
+    <string id="task_10_title">Task 10</string>
+    <string id="task_11_prompt">Enter task 11 name here</string>
+    <string id="task_11_title">Task 11</string>
+    <string id="task_12_prompt">Enter task 12 name here</string>
+    <string id="task_12_title">Task 12</string>
+    <string id="task_13_prompt">Enter task 13 name here</string>
+    <string id="task_13_title">Task 13</string>
+    <string id="task_14_prompt">Enter task 14 name here</string>
+    <string id="task_14_title">Task 14</string>
+    <string id="task_15_prompt">Enter task 15 name here</string>
+    <string id="task_15_title">Task 15</string>
+    <string id="task_16_prompt">Enter task 16 name here</string>
+    <string id="task_16_title">Task 16</string>
+    <string id="task_17_prompt">Enter task 17 name here</string>
+    <string id="task_17_title">Task 17</string>
+    <string id="task_18_prompt">Enter task 18 name here</string>
+    <string id="task_18_title">Task 18</string>
+    <string id="task_19_prompt">Enter task 19 name here</string>
+    <string id="task_19_title">Task 19</string>
+    <string id="task_20_prompt">Enter task 20 name here</string>
+    <string id="task_20_title">Task 20</string>
+
+    <string id="no_tasks">No tasks configured</string>
+</strings>

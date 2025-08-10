@@ -1,0 +1,62 @@
+<settings>
+    <setting propertyKey="@Properties.task_1" title="@Strings.task_1_title" prompt="@Strings.task_1_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_2" title="@Strings.task_2_title" prompt="@Strings.task_2_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_3" title="@Strings.task_3_title" prompt="@Strings.task_3_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_4" title="@Strings.task_4_title" prompt="@Strings.task_4_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_5" title="@Strings.task_5_title" prompt="@Strings.task_5_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_6" title="@Strings.task_6_title" prompt="@Strings.task_6_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_7" title="@Strings.task_7_title" prompt="@Strings.task_7_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_8" title="@Strings.task_8_title" prompt="@Strings.task_8_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_9" title="@Strings.task_9_title" prompt="@Strings.task_9_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_10" title="@Strings.task_10_title" prompt="@Strings.task_10_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_11" title="@Strings.task_11_title" prompt="@Strings.task_11_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_12" title="@Strings.task_12_title" prompt="@Strings.task_12_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_13" title="@Strings.task_13_title" prompt="@Strings.task_13_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_14" title="@Strings.task_14_title" prompt="@Strings.task_14_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_15" title="@Strings.task_15_title" prompt="@Strings.task_15_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_16" title="@Strings.task_16_title" prompt="@Strings.task_16_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_17" title="@Strings.task_17_title" prompt="@Strings.task_17_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_18" title="@Strings.task_18_title" prompt="@Strings.task_18_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_19" title="@Strings.task_19_title" prompt="@Strings.task_19_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.task_20" title="@Strings.task_20_title" prompt="@Strings.task_20_prompt">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+</settings>
