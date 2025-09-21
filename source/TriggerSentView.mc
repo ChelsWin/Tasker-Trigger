@@ -1,10 +1,17 @@
+import Toybox.Application;
+import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.System;
 import Toybox.Timer;
 import Toybox.WatchUi;
 
 
 class TriggerSentView extends WatchUi.View {
 
+    // Theme and colours
+    var _theme = THEME_DARK;
+    var _fgColour = Graphics.COLOR_WHITE;
+    var _bgColour = Graphics.COLOR_BLACK;
     // Timer to auto-close the view
     var _timer;
     // Message to display on screen
@@ -22,6 +29,15 @@ class TriggerSentView extends WatchUi.View {
 
     // onLayout() is called to set the layout of the view
     function onLayout(dc) {
+        // Set the colours
+        _theme = Application.getApp().getTheme();
+        if (_theme.equals(THEME_LIGHT)) {
+            _fgColour = Graphics.COLOR_BLACK;
+            _bgColour = Graphics.COLOR_WHITE;
+        } else {
+            _fgColour = Graphics.COLOR_WHITE;
+            _bgColour = Graphics.COLOR_BLACK;
+        }
     }
 
     // onShow() is called when the view is shown
@@ -33,9 +49,14 @@ class TriggerSentView extends WatchUi.View {
 
     // onUpdate() is called to update the view
     function onUpdate(dc) {
+        // Check if the theme has changed
+        if (Application.getApp().getTheme() != _theme) {
+            onLayout(dc);
+        }
+
+        // Set the text colour and background based on the theme
+        dc.setColor(_fgColour, _bgColour);
         dc.clear();
-        // Set text color to white and background to black
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_TINY, _message + "\nTriggered!", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 

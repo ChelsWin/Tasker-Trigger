@@ -1,7 +1,14 @@
 import Toybox.Application;
+import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.System;
 import Toybox.WatchUi;
 
+
+enum Theme {
+    THEME_LIGHT,
+    THEME_DARK
+}
 
 class TaskerTriggerApp extends Application.AppBase {
 
@@ -9,9 +16,20 @@ class TaskerTriggerApp extends Application.AppBase {
     var _menu;
     // Define the number of tasks
     var _numberOfTasks = 20;
+    // Theme tracking
+    private var _theme = THEME_LIGHT;
 
     function initialize() {
         AppBase.initialize();
+        updateTheme();
+    }
+
+    // onNightModeChanged() is called when the device's night mode setting changes
+    function onNightModeChanged() as Void {
+        // Update the theme
+        updateTheme();
+        // Force a screen update
+        WatchUi.requestUpdate();
     }
 
     // onStart() is called on application start up
@@ -46,6 +64,21 @@ class TaskerTriggerApp extends Application.AppBase {
     // getGlanceView() is called to return the glance view and its delegate
     function getGlanceView() {
         return [ new TaskerTriggerGlanceView() ];
+    }
+
+    // Update the theme based on the device settings
+    private function updateTheme() as Void {
+        // Test for night mode
+        if (System.getDeviceSettings() has :isNightModeEnabled) {
+            _theme = System.getDeviceSettings().isNightModeEnabled ? THEME_DARK : THEME_LIGHT;
+        } else {
+            _theme = THEME_DARK;
+        }
+    }
+
+    // Theme accessor
+    function getTheme() as Theme {
+        return _theme;
     }
 
     // --------------------------
