@@ -57,7 +57,8 @@ class TriggerSentView extends WatchUi.View {
         // Set the text colour and background based on the theme
         dc.setColor(_fgColour, _bgColour);
         dc.clear();
-        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_TINY, _message + "\nTriggered!", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        // Draw the message and "Triggered!" text centered on the screen (added 2 line breaks so it is visible on Instinct Crossover)
+        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_SMALL, _message + "\n\nTriggered!", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     // onHide() is called when the view is hidden
