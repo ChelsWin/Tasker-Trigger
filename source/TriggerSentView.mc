@@ -16,15 +16,25 @@ class TriggerSentView extends WatchUi.View {
     var _timer;
     // Message to display on screen
     var _message;
+    // Flag to indicate if there is an error message
+    var _isError;
 
-    function initialize(message as String) {
+    function initialize(message as String, isError as Boolean) {
         View.initialize();
-        // Truncate the message if it exceeds 16 characters
-        if (message.length() > 16) {
-            _message = message.substring(0, 13) + "...";
+        _isError = isError;
+
+        if (!_isError) {
+            // Truncate the message if it exceeds 16 characters
+            if (message.length() > 16) {
+                _message = message.substring(0, 13) + "...";
+            } else {
+                _message = message;
+            }
         } else {
+            // Use the full error message
             _message = message;
         }
+
     }
 
     // onLayout() is called to set the layout of the view
@@ -43,8 +53,9 @@ class TriggerSentView extends WatchUi.View {
     // onShow() is called when the view is shown
     function onShow() {
         _timer = new Timer.Timer();
-        // Start the timer to call popView after 1.6 seconds
-        _timer.start(method(:popView), 1600, false);
+        var duration = _isError ? 3000 : 1600;  // Show error messages for 3 seconds and normal messages for 1.6 seconds
+        // Start the timer to call popView after the duration
+        _timer.start(method(:popView), duration, false);
     }
 
     // onUpdate() is called to update the view
@@ -57,8 +68,15 @@ class TriggerSentView extends WatchUi.View {
         // Set the text colour and background based on the theme
         dc.setColor(_fgColour, _bgColour);
         dc.clear();
-        // Draw the message and "Triggered!" text centered on the screen (added 2 line breaks so it is visible on Instinct Crossover)
-        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_SMALL, _message + "\n\nTriggered!", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
+        if (_isError) {
+            // Draw the error message centered on the screen
+            dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_TINY, _message, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            return;
+        } else {
+            // Draw the message and "Triggered!" text centered on the screen (added 2 line breaks so it is visible on Instinct Crossover)
+            dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_SMALL, _message + "\n\nTriggered!", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        }
     }
 
     // onHide() is called when the view is hidden
