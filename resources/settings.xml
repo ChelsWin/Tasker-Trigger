@@ -1,4 +1,7 @@
 <settings>
+    <setting propertyKey="@Properties.exit_after_trigger" title="@Strings.exit_after_trigger_title">
+        <settingConfig type="boolean" />
+    </setting>
     <setting propertyKey="@Properties.task_1" title="@Strings.task_1_title" prompt="@Strings.task_1_prompt">
         <settingConfig type="alphaNumeric" />
     </setting>

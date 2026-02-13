@@ -18,12 +18,17 @@ class TriggerSentView extends WatchUi.View {
     var _message;
     // Flag to indicate if there is an error message
     var _isError;
+    // Flag to indicate if the app should exit after showing the message
+    var _shouldExit = false;
 
     function initialize(message as String, isError as Boolean) {
         View.initialize();
         _isError = isError;
 
         if (!_isError) {
+            // Check if the app should exit after triggering the task
+            _shouldExit = Properties.getValue("exit_after_trigger");
+
             // Truncate the message if it exceeds 16 characters
             if (message.length() > 16) {
                 _message = message.substring(0, 13) + "...";
@@ -34,7 +39,6 @@ class TriggerSentView extends WatchUi.View {
             // Use the full error message
             _message = message;
         }
-
     }
 
     // onLayout() is called to set the layout of the view
@@ -90,6 +94,12 @@ class TriggerSentView extends WatchUi.View {
 
     // Called to close the view and return to the previous one
     function popView() as Void {
-        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+        // If the app should exit after showing the message and there is no error then exit the app
+        if (_shouldExit && !_isError) {
+            System.exit();
+        } else {
+            // Otherwise just pop the view
+            WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+        }
     }
 }

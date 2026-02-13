@@ -1,4 +1,5 @@
 <properties>
+    <property id="exit_after_trigger" type="boolean">false</property>
     <property id="task_1" type="string"></property>
     <property id="task_2" type="string"></property>
     <property id="task_3" type="string"></property>
